@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Crete+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Spray+Paint&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav ul{
+    list-style-type: none;
+    font-size: 26px;
+    padding-left: 25px;
+}
+
+nav{
+    background-color: rgb(17, 11, 67);
+    color: white;
+    font-family: 'Crete Round', serif;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.gameContainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.container{
+    display: grid;
+    grid-template-rows: repeat(3, 10vw);
+    grid-template-columns: repeat(3, 10vw);
+    font-family: 'Rubik Spray Paint', cursive;
+    position: relative;
+}
+
+.box{
+    font-size: 7vw;
+    border: 2px solid black;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box:hover{
+    background-color: rgb(179, 168, 188);       
+}
+
+.info{
+    font-size: 22px;
+}
+
+.gameInfo{
+    padding: 0 35px;
+    font-family: 'Crete Round', serif;
+}
+
+.imgBox img{
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+.bt0{
+    border-top: 0;
+}
+
+.bb0{
+    border-bottom: 0;
+}
+
+.bl0{
+    border-left: 0;
+}
+
+
+.br0{
+    border-right: 0;
+}
+
+#reset {
+    margin: 10px 35px;
+    padding: 6px 20px;
+    background: rgb(255 0 0);
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: 'Crete Round', serif;
+    font-weight: bold;
+}
+
+.line{
+    background-color: black;
+    width: 0;
+    height: 5px;
+    position: absolute;
+    transition: width 1s ease-in-out;
+}
+
+@media screen and (max-width: 700px)
+{
+    .gameContainer{
+        flex-wrap: wrap;
+        margin-top: 50px;
+    }
+
+    .gameInfo{
+        margin-top: 40px;
+    }
+    .gameInfo h1{
+        font-size: 1.6rem;
+    }
+
+    .container{
+        grid-template-rows: repeat(3,20vw);
+        grid-template-columns: repeat(3,20vw);
+    }
+    
+}
